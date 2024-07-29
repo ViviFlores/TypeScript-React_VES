@@ -15,13 +15,15 @@ export const Usuarios = () => {
     }, []);
 
     //función manipular cada uno de los items del arreglo users
-    const itemUsuario = (usuario: Usuario) => {
+    const itemUsuario = ({first_name, last_name, email, avatar}: Usuario) => {
         return (
             <tr>
-                <td>Foto</td>
-                <td>Camila</td>
-                <td>Castro</td>
-                <td>ccastro@gmail.com</td>
+                <td>
+                    <img src={avatar}/>
+                </td>
+                <td>{first_name}</td>
+                <td>{last_name}</td>
+                <td>{email}</td>
             </tr>
         )
     }
